@@ -1,0 +1,13 @@
+target
+target/*
+*.eps
+Iswfk.tex
+swfk.tmproj
+*.aux
+*.log
+*.pdf
+*.idx
+*.out
+swfk.synctex.gz
+swfk.toc
+swfk.dvi
