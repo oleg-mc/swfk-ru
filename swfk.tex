@@ -13,6 +13,9 @@
 \usepackage[absolute]{textpos}
 \usepackage{wrapfig}
 \usepackage{eso-pic}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
 
 \parindent 1cm
 \parskip 0.2cm
@@ -35,9 +38,9 @@
 \newcommand{\code}{\textcolor{OliveGreen}\bfseries}
 
 \includeversion{FRONTCOVER}
-\excludeversion{WINDOWS}
+\includeversion{WINDOWS}
 \excludeversion{MAC}
-\includeversion{LINUX}
+\excludeversion{LINUX}
 
 \title{Snake Wrangling for Kids - Learning to Program with Python}
 \author{Jason R Briggs}

@@ -13,6 +13,9 @@
 \usepackage[absolute]{textpos}
 \usepackage{wrapfig}
 \usepackage{eso-pic}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
 
 \parindent 1cm
 \parskip 0.2cm
