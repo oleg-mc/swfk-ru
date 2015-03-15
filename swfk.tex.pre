@@ -6,7 +6,7 @@
 \documentclass[12pt,leqno,a4paper]{book}
 \usepackage[dvips]{graphicx}
 \usepackage[usenames]{color}
-\usepackage[colorlinks,pdfauthor={Jason R Briggs},pdftitle={Snake Wrangling for Kids - Learning to Program with Python},pdfsubject={Programming for Kids},pdfkeywords={python,kids,programming}]{hyperref}
+\usepackage[dvipdfmx,unicode,colorlinks,pdfauthor={Jason R Briggs},pdftitle={Snake Wrangling for Kids - Learning to Program with Python},pdfsubject={Programming for Kids},pdfkeywords={python,kids,programming}]{hyperref}
 \usepackage{longdiv}
 \usepackage{makeidx}
 \usepackage{versions}

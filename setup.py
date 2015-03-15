@@ -99,7 +99,7 @@ class LatexCommand(Command):
             spawn([latex, '--output-directory=%s' % target_dir, tex])
 
             pdf = '%s/swfk-%s-%s%s.pdf' % (target_dir, platform, version, fname_suffix)
-            spawn([dvipdf, '%s/swfk.dvi' % target_dir, pdf])
+            spawn([dvipdf, '-o', pdf, '%s/swfk.dvi' % target_dir])
 
             zf = ZipFile('%s/swfk-%s-%s%s.zip' % (target_dir, platform, version, fname_suffix), 'w')
             zf.write(pdf)
