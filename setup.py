@@ -22,7 +22,7 @@ platforms = 'win',
 #
 latex = find_executable('latex')
 makeindex = find_executable('makeindex')
-dvipdf = find_executable('dvipdf')
+dvipdf = find_executable('dvipdfm')
 
 #
 # Get the book version
