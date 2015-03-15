@@ -22,7 +22,7 @@ platforms = 'win',
 #
 latex = find_executable('latex')
 makeindex = find_executable('makeindex')
-dvipdf = find_executable('dvipdfm')
+dvipdf = find_executable('dvipdfmx')
 
 #
 # Get the book version
@@ -100,6 +100,7 @@ class LatexCommand(Command):
 
             pdf = '%s/swfk-%s-%s%s.pdf' % (target_dir, platform, version, fname_suffix)
             spawn([dvipdf, '-o', pdf, '%s/swfk.dvi' % target_dir])
+#             spawn([dvipdf, '%s/swfk.dvi' % target_dir, pdf])
 
             zf = ZipFile('%s/swfk-%s-%s%s.zip' % (target_dir, platform, version, fname_suffix), 'w')
             zf.write(pdf)
