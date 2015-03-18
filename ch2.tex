@@ -36,7 +36,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 Почему ответ Python отличается?  Он сломан?\\
 
 \noindent
-На самом деле, нет. Причина в том, как компьютер иначе обрабатывает числа с плавающей точкой\index{floating point}(числа с целой и добной частью). Это сложная и, порой, сбивающая с толку проблема для новчиков, так что проще просто запомнить, что при работе с дробями (т.е. с числами с точкой) \emph{иногда} результат будет не совсем таким, как ты ожидаешь. Это так же действует для умножения, деления, сложения и вычитания. 
+На самом деле, нет. Причина в том, как компьютер иначе обрабатывает числа с плавающей точкой\index{floating point}(числа с целой и дробной частью). Это сложная и, порой, сбивающая с толку проблема для новичков, так что проще просто запомнить, что при работе с дробями (т.е. с числами с точкой) \emph{иногда} результат будет не совсем таким, как ты ожидаешь. Это так же действует для умножения, деления, сложения и вычитания. 
 }}}
 \end{center}
 \end{figure}
@@ -75,7 +75,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 Это означает \$5 и \$30 минус \$10 умноженные на 52 недель в году.  И у тебя остаётся \$1300 к концу года. Хорошо, пока что это всё не выглядит так уж полезно.  Мы можем сделать всё это с помощью калькулятора.  Но мы вернемся к этому позднее и покажем, как сделать пример значительно полезнее.
 
-Ты можешь делать умножение\index{multiplication} и сложение\index{addition} (очевидно), и вычитание\index{subtraction} и деление\index{division} в консоли Python, вместе с набором других метематических операций, которые мы пока не будем тут рассматривать. Пока что основные математические символы в Python (на самом деле, они называются операторы\index{operators}) следующие:
+Ты можешь делать умножение\index{multiplication} и сложение\index{addition} (очевидно), и вычитание\index{subtraction} и деление\index{division} в консоли Python, вместе с набором других математических операций, которые мы пока не будем тут рассматривать. Пока что основные математические символы в Python (на самом деле, они называются операторы\index{operators}) следующие:
 
 \begin{center}
 \begin{tabular}{|c|c|}
@@ -114,7 +114,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 \section{Использование скобок и ``Порядок Операций''}\index{order of operations}
 
-We use brackets in a programming language to control what is called ``Order of Operations''.  An operation is the use of an operator (one of those symbols in the table above).  There are more operators than those basic symbols, but for that simple list (addition, subtraction, multiplication and division), it's enough to know that multiplication and division both have a higher order than addition and subtraction.  Which means you do the multiplication or division part of an equation before you do the addition or subtraction part.  In the following equation, all the operators are addition (+), the numbers are added in order:
+В языке программирования мы используем скобки для управления так называемым ``Порядком Операций''.  Операцией называется факт использования оператора (одного из тех символов в таблице выше). Существуют и другие операторы кроме этих символов, но для нашего простого списка (сложение, вычитание, умножение и деление) достаточно знать, что умножение и деление имеют более высокий приоритет чем сложение и вычитание.  Это означает, что сначала ты выполняешь все умножения или деления в выражении, а потом сложения и вычитания.  В следующем выражении все операции являются сложениями (+), поэтому числа складываются по порядку:
 
 \begin{listing}
 \begin{verbatim}

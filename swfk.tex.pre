@@ -6,7 +6,6 @@
 \documentclass[12pt,leqno,a4paper]{book}
 \usepackage[dvips]{graphicx}
 \usepackage[dvipsnames]{xcolor}
-\usepackage[unicode,colorlinks,pdfauthor={Jason R Briggs},pdftitle={Snake Wrangling for Kids - Learning to Program with Python},pdfsubject={Programming for Kids},pdfkeywords={python,kids,programming}]{hyperref}
 \usepackage{longdiv}
 \usepackage{makeidx}
 \usepackage{versions}
@@ -16,6 +15,14 @@
 \usepackage[T1,T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[english,russian]{babel}
+\usepackage[
+    unicode,
+    colorlinks,
+    pdfauthor={Джейсон Р. Бриггс},
+    pdftitle={Укрощение Змей Для Детей - Учимся Программировать с Python},
+    pdfsubject={Программирование для Детей},
+    pdfkeywords={python,kids,programming}
+    ]{hyperref}
 
 \parindent 1cm
 \parskip 0.2cm
@@ -42,8 +49,8 @@
 \@MAC_INC@version{MAC}
 \@LINUX_INC@version{LINUX}
 
-\title{Snake Wrangling for Kids - Learning to Program with Python}
-\author{Jason R Briggs}
+\title{Укрощение Змей Для Детей - Учимся Программировать с Python}
+\author{Джейсон Р. Бриггс}
 
 \makeindex
 
