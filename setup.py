@@ -14,8 +14,8 @@ target_dir = 'target'
 #
 # 
 #
-platforms = 'win', 'mac', 'linux'
-#platforms = 'win',
+# platforms = 'win', 'mac', 'linux'
+platforms = 'win', 'linux'
 
 #
 # find the executables to use in compiling the books
@@ -102,7 +102,6 @@ class LatexCommand(Command):
             spawn([dvips, '-o', '%s/swfk.ps' % target_dir, '%s/swfk.dvi' % target_dir])
 
             pdf = '%s/swfk-%s-%s%s.pdf' % (target_dir, platform, version, fname_suffix)
-#             spawn([dvipdf, '-o', pdf, '%s/swfk.dvi' % target_dir])
             spawn([ps2pdf, '%s/swfk.ps' % target_dir, pdf])
 
             zf = ZipFile('%s/swfk-%s-%s%s.zip' % (target_dir, platform, version, fname_suffix), 'w')
