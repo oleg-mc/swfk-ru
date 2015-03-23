@@ -124,7 +124,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 \end{listing}
 
 \noindent
-Similarly, in this equation, there are only addition and subtraction operators, so again Python considers each number in the order it appears:
+Точно также, в этом выражении присутствуют только сложение и вычитание, поэтому Python снова выполняет вычисления в порядке их появления:
 
 \begin{listing}
 \begin{verbatim}
@@ -134,7 +134,7 @@ Similarly, in this equation, there are only addition and subtraction operators, 
 \end{listing}
 
 \noindent
-But in the following equation, there is a multiplication operator, so the numbers 30 and 20 are considered first.  The equation is another way of saying, ``multiply 30 by 20, then add 5 to the result'' (multiplication first, because it has a higher order than addition):
+Но вот в следующем выражении появляется оператор умножения, поэтому первыми в вычислении будут использоваться числа 30 и 20.  Данное выражение говорит: ``умножить 30 на 20, а затем к результату прибавить 5'' (операция умножения выполняется прервой, потому что она имеет более высокий порядок, чем операция сложения):
 
 \begin{listing}
 \begin{verbatim}
@@ -144,7 +144,7 @@ But in the following equation, there is a multiplication operator, so the number
 \end{listing}
 
 \noindent
-So what happens when we add brackets?  The following equation shows the result:
+Так что же произойдет, если добавить скобки? В следующем выражении можно это увидеть:
 
 \begin{listing}
 \begin{verbatim}
@@ -154,8 +154,8 @@ So what happens when we add brackets?  The following equation shows the result:
 \end{listing}
 
 \noindent
-Why is the number different?  Because brackets control the order of operations.  With brackets, Python knows to calculate using the operators in the brackets first, then do the operators outside.  So that equation is another way of saying, ``add 5 and 30, then multiply the result by 20''.
-The use of brackets can become more complicated.  There can be brackets inside brackets:
+Почему результаты различаются? Потому, что скобки управляют порядком операций. Благодаря скобкам Python понимает, что сначала нужно выполнить операции внутри скобок, а затем выполнить операции снаружи скобок. Поэтому данное выражение говорит: ``сложить 5 и 30, а затем умножить результат на 20''.
+Использование скобок бывает и более сложным. Скобки могут находиться внутри других скобок:
 
 \begin{listing}
 \begin{verbatim}
@@ -165,7 +165,7 @@ The use of brackets can become more complicated.  There can be brackets inside b
 \end{listing}
 
 \noindent
-In this case, Python evaluates the \textbf{inner} most brackets first, then the outer brackets, and then the other operator.  So this equation is a way of saying, ``add 5 and 30, then multiply the result by 20, finally divide that result by 10''.  The result without brackets is again slightly different:
+В данном случае, Python в первую очередь вычисляет самые \textbf(глубокие) скобки, затем внешние скобки, а затем остальные операторы. Другими словами, данное выражение означает: ``сложить 5 и 30, затем умножить результат на 20, а в конце разделить результат на 10''. Результат без скобок будет несколько отличаться:
 
 \begin{listing}
 \begin{verbatim}
@@ -174,21 +174,22 @@ In this case, Python evaluates the \textbf{inner} most brackets first, then the 
 \end{verbatim}
 \end{listing}
 
-In this case 30 is multiplied by 20 first, then the result is divided by 10, finally 5 is added to the final result.
+В данном случае, сначала умножаются 30 на 20, затем результат делится на 10, и в конце к результату деления прибавляется 5.
 
-\emph{Remember that multiplication and division always go before addition and subtraction, unless brackets are used to control the order of operations.}
+\emph{Запомни, что умножение и деление всегда выполняются перед сложением и вычитанием, а скобки позволяют управлять этим порядком операций.}
 
-\section{There's nothing so fickle as a variable}\index{variable}
+\section{Нет ничего более непостоянного, чем переменная}\index{variable}
 
-A `variable' is a programming term used to describe a place to store things.  The `things' can be numbers, or text, or lists of numbers and text---and all sorts of other items too numerous to go into here.  For the moment, let's just think of a variable as something a bit like a mailbox.
+В программировании термином `переменная` описывают место для хранения разных значений. Такими `значениями` могут быть числа, строки или список чисел и строк---и множество других вариантов значений, которых слишком много, чтобы здесь перечислять.  Пока что давай думать о переменной, как о чём-то, вроде почтового ящика.
 
 \begin{center}
 \includegraphics*[width=76mm]{girlbubble.eps}
 \end{center}
 
-You can put things (such as a letter or a package) in a mailbox, just as you can put things (numbers, text, lists of numbers and text, etc, etc, etc) in a variable.  This mailbox idea is the way many programming languages work.  But not all.
+Ты можешь положить что-нибудь (например письмо или посылку) в почтовый ящик, точно так же ты можешь положить значение (число, строку, список чисел или целый текст, и така далее и так далее) внутрь переменной.  Подобно этой идее с почтовым ящиком, с переменными работают многие языки программирования. Но не все.
 
-In Python, variables are slightly different.  Rather than being a mailbox with things in it, a variable is more like a label which is stuck on the outside of the mailbox.  We can pull that label off and stick it on something else, or even tie the label (perhaps with a piece of string) to more than one thing. We create a variable by giving it a name, using an equals sign (=), then telling Python what we want that name to point to.  For example:
+В Python переменные немного другие. Вместо просто почтового ящика с срдержимым внутри, переменная Python больше похожа на наклейку или ярлык с названием, который приклеен к ящику снаружи.  Мы можем отклеить его и наклеить на другой ящик, или даже одновременно приклеить к нескольким ящикам.  Чтобы создать переменную, мы даем ей, имя используя после него знак равно (=), а потом говорим Python, на что именно должна эта переменная указывать (на каком ящике её повесить).  Например: 
+
 
 \begin{listing}
 \begin{verbatim}
@@ -196,7 +197,7 @@ In Python, variables are slightly different.  Rather than being a mailbox with t
 \end{verbatim}
 \end{listing}
 
-We've just created a variable called `fred' and said that it points to the number 100.  It's a bit like telling Python to remember that number because we want to use it later.  To find out what a variable is pointing at, we can just type `print' in the console, followed by the variable name, and hit the Enter key.  For example:
+Мы только что создали переменную с названием `fred' и сказали, что она указывает на число 100.  Мы будто просим Python запомнить это число, чтобы мы могли им воспользоваться позднее.  Чтобы выяснить, куда указвает переменная, мы можем просто напечать `print' в консоли с именем переменной и нажать клавишу Enter.  Например:
 
 \begin{listing}
 \begin{verbatim}
@@ -206,7 +207,7 @@ We've just created a variable called `fred' and said that it points to the numbe
 \end{verbatim}
 \end{listing}
 
-We can also tell Python we want the variable \code{fred} to point at something else:
+Мы также можем сказать Python, чтобы переменная \code{fred} указывала на что-нибудь другое:
 
 \begin{listing}
 \begin{verbatim}
@@ -217,7 +218,7 @@ We can also tell Python we want the variable \code{fred} to point at something e
 \end{listing}
 
 \noindent
-On the first line we say we now want fred to point at the number 200.  Then, in the second line, we ask what fred is pointing at just to prove it changed. We can also point more than one name at the same item:
+В первой строке мы сказали, чтобы fred теперь указывала на число 200. Затем, во второй строке мы захотели убедиться в этом, напечатав её. Мы также можем указать на значение более чем одной переменной:
 
 \begin{listing}
 \begin{verbatim}
@@ -228,18 +229,19 @@ On the first line we say we now want fred to point at the number 200.  Then, in 
 \end{verbatim}
 \end{listing}
 
-In the code above, we're saying that we want the name (or label) \code{john} to point at the same thing \code{fred} is pointing to.
-Of course, `fred' isn't a very useful name for a variable.  It doesn't tell us anything about what it's used for.  A mailbox is easy---you use a mailbox for mail.  But a variable can have a number of different uses, and can point at a whole bunch of different things, so we usually want something more informative as its name.
+В примере выше мы создаем переменную (или ярлык) \code{john}, который указывает на то же самое значение, на которое указывает переменная \code{fred}.
+
+Раумеется, `fred' -- не самое подходящее имя для переменной.  Это имя никак не объясняет нам, что означает данная переменная.  С почтовым ящиком всё понятно---он хранит письма. Но переменная может использоваться для совершенного разных вещей и указывать на совершенно разные значения, поэтому, обычно, мы даем переменным более значащие имена.
 \par
-Suppose you started up the Python console, typed `fred = 200', then went away---spent 10 years climbing Mount Everest, crossing the Sahara desert, bungy-jumping off a bridge in New Zealand, and finally, sailing down the Amazon river---when you came back to your computer, would you remember what that number 200 meant (and what it was for)?
+Предположим, ты запустил консоль Python, напечатал `fred=200', а потом ушёл---прошло 10 лет, за которые ты покорил гору Эверест, пересёк пустыню Сахара, попрыгал на резинке с моста в Новой Зеландии и сплавился вниз по реке Амазонка---затем ты вернулся к своему компьютеру.  Вспомнил бы ты теперь, что означало это число 200 (и как оно использовалось)?
 
 \noindent
-\emph{I don't think I would.}
+\emph{Я не думаю, что вспомнила бы.}
 
 \noindent
-I just made it up now, and I have no idea what `fred = 200' means (other than a \emph{name} pointing at the number \emph{200}).  So after 10 years, you'll have absolutely no chance of remembering.
+Я только что придумала эту переменную и я понятия не имею что значит `fred=200' (кроме того, что имя \emph{fred} указывает на число \emph{200}).  Так что, через 10 лет у тебя не будет никакого шанса вспомнить об этом.
 \par
-Aha!  But, what if we called our variable: \emph{number\_of\_students}.
+Ага!  А что, если мы назовем нашу переменную: \emph{number\_of\_students}\footnote{количество\_студентов (англ.)}.
 
 \begin{listing}
 \begin{verbatim}
@@ -247,7 +249,7 @@ Aha!  But, what if we called our variable: \emph{number\_of\_students}.
 \end{verbatim}
 \end{listing}
 
-We can do that because variable names can be made up of letters, numbers and (\_) underscores---although they cannot start with a number.  If you come back after 10 years, `number\_of\_students' still makes sense.  You can type:
+Мы можем так сделать, потому что имена переменных могут состоять из букв, цифр и знаков подчёркивания (\_)---однако, не могут начинаться с цифры.  Даже вернувшись через 10 лет, смысл переменной `number\_of\_students' будет тебе понятен.  Ты можешь напечатать:
 
 \begin{listing}
 \begin{verbatim}
@@ -257,15 +259,15 @@ We can do that because variable names can be made up of letters, numbers and (\_
 \end{listing}
 
 \noindent
-And you'll immediately know that we're talking about 200 students.  It's not always important to come up with meaningful names for variables.  You can use anything from single letters (such as `a') to large sentences; and sometimes, if you're doing something quick, a simple and short variable name is just as useful.  It depends very much upon whether you want to be able to look at that variable name later and figure out what on earth you were thinking at the time you typed it in.
+И ты сразу поймёшь, что мы говорим о 200 студентах.  Использование понятных имен для переменных не всегда так уж важно.  Ты можешь использовать любые названия от одной буквы (например `a') до длинных предложений; и иногда, когда ты делаешь что-то быстрое, короткие и простые названия переменных бывают очень полезны. Это во многом зависит от того, надо ли тебе будет смотреть на эту переменную в будущем и вспоминать, о чём ты думал, когда печатал её.
 
 \begin{listing}
-\begin{verbatim}
-this_is_also_a_valid_variable_name_but_perhaps_not_very_useful
-\end{verbatim}
+%\begin{verbatim}
+\texttt{this\_is\_also\_a\_valid\_variable\_name\_but\_perhaps\_not\_very\_useful\footnote{это\_тоже\_корректное\_имя\_переменной\_но\_врядли\_очень \_полезное (англ.)}}
+%\end{verbatim}\footnote{ffff ffff}
 \end{listing}
 
-\section{Using Variable}\index{Variables}
+\section{Использование Переменных}\index{Variables}
 
 Now we know how to create a variable, how do we use it?  Remember that equation we came up with earlier?  The one to work out how much money you'd have left at the end of the year, if you earned \$5 a week doing chores, \$30 a week on a paper round, and spent \$10 per week.  So far we have:
 

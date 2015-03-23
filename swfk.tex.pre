@@ -17,12 +17,14 @@
 \usepackage[english,russian]{babel}
 \usepackage[
     unicode,
+    naturalnames,
     colorlinks,
     pdfauthor={Джейсон Р. Бриггс},
     pdftitle={Укрощение Змей Для Детей - Учимся Программировать с Python},
     pdfsubject={Программирование для Детей},
     pdfkeywords={python,kids,programming}
     ]{hyperref}
+%\usepackage{bookmark}
 
 \parindent 1cm
 \parskip 0.2cm
